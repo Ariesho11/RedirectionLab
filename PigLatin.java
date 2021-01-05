@@ -10,6 +10,11 @@ public class PigLatin{
       System.out.println(pigLatinSimple("pie"));
       System.out.println(pigLatinSimple("david"));
       System.out.println(pigLatinSimple("aaron"));
+      System.out.println(pigLatin("the"));
+      System.out.println(pigLatin("check"));
+      System.out.println(pigLatin("skee"));
+      System.out.println(pigLatin("emu"));
+      System.out.println(pigLatin("grade"));
     }
     public static String pigLatinSimple(String s){
       String ns = "";
@@ -22,6 +27,27 @@ public class PigLatin{
             }
           else ns = ns + Character.toString(s.charAt(i));
         }
+        return(ns);
+      }
+
+      public static String pigLatin(String s){
+        String[] digraphs = {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr",
+                            "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc",
+                            "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th",
+                            "tr", "tw", "wh", "wr"};
+        String ns = "";
+        String temp = "";
+        for(int j = 0; j < digraphs.length; j++){
+          if(s.substring(0,2).equals(digraphs[j])){
+            temp = digraphs[j];
+            ns = s.substring(3, s.length()) + temp + "ay";
+          }
+        }
+        if((s.charAt(0)=='a')||(s.charAt(0)=='e')||(s.charAt(0)=='i')||(s.charAt(0)=='o')||(s.charAt(0)=='u')){
+          temp = s.substring(0,2);
+          ns = s.substring(3, s.length()) + temp + "ay";
+        }
+        else ns = s.substring(1, s.length()) + s.substring(0,2) + "ay";
         return(ns);
       }
     //If you want to read the input word by word
