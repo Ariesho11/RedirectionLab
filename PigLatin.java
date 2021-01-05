@@ -15,6 +15,14 @@ public class PigLatin{
       System.out.println(pigLatin("skee"));
       System.out.println(pigLatin("emu"));
       System.out.println(pigLatin("grade"));
+      System.out.println(pigLatinBest("*emu"));
+      System.out.println(pigLatinBest("4chan"));
+      System.out.println(pigLatinBest("fish!"));
+      System.out.println(pigLatinBest("fish"));
+      System.out.println(pigLatinBest("the."));
+      System.out.println(pigLatinBest("cat!"));
+      System.out.println(pigLatinBest("amazing?"));
+      System.out.println(pigLatinBest("apple%"));
     }
     public static String pigLatinSimple(String s){
       String ns = "";
@@ -36,6 +44,26 @@ public class PigLatin{
                             "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th",
                             "tr", "tw", "wh", "wr"};
         String ns = "";
+        for(int j = 0; j < digraphs.length; j++){
+          if(s.substring(0,2).equals(digraphs[j])){
+            temp = digraphs[j];
+            ns = s.substring(3, s.length()) + temp + "ay";
+          }
+        }
+        if((s.charAt(0)=='a')||(s.charAt(0)=='e')||(s.charAt(0)=='i')||(s.charAt(0)=='o')||(s.charAt(0)=='u')){
+          temp = s.substring(0,2);
+          ns = s.substring(3, s.length()) + temp + "ay";
+        }
+        else ns = s.substring(1, s.length()) + s.substring(0,2) + "ay";
+        return(ns);
+      }
+
+      public static String pigLatinBest(String s){
+        String[] digraphs = {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr",
+                            "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc",
+                            "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th",
+                            "tr", "tw", "wh", "wr"};
+        String ns = "";
         String temp = "";
         for(int j = 0; j < digraphs.length; j++){
           if(s.substring(0,2).equals(digraphs[j])){
@@ -47,6 +75,7 @@ public class PigLatin{
           temp = s.substring(0,2);
           ns = s.substring(3, s.length()) + temp + "ay";
         }
+        if((s.charAt(0) < 'a') || (s.charAt(0) > 'z')) ns = s;
         else ns = s.substring(1, s.length()) + s.substring(0,2) + "ay";
         return(ns);
       }
