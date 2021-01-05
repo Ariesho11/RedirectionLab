@@ -6,23 +6,23 @@ public class PigLatin{
       Scanner n = new Scanner( System.in );
       //use hasNextLine()/nextLine() to loop over
       //all of the data
-      System.out.println(pigLatinSimple("mock"));
-      System.out.println(pigLatinSimple("pie"));
-      System.out.println(pigLatinSimple("david"));
-      System.out.println(pigLatinSimple("aaron"));
-      System.out.println(pigLatin("the"));
-      System.out.println(pigLatin("check"));
-      System.out.println(pigLatin("skee"));
-      System.out.println(pigLatin("emu"));
-      System.out.println(pigLatin("grade"));
-      System.out.println(pigLatinBest("*emu"));
-      System.out.println(pigLatinBest("4chan"));
-      System.out.println(pigLatinBest("fish!"));
-      System.out.println(pigLatinBest("fish"));
-      System.out.println(pigLatinBest("the."));
-      System.out.println(pigLatinBest("cat!"));
-      System.out.println(pigLatinBest("amazing?"));
-      System.out.println(pigLatinBest("apple%"));
+      // System.out.println(pigLatinSimple("mock"));
+      // System.out.println(pigLatinSimple("pie"));
+      // System.out.println(pigLatinSimple("david"));
+      // System.out.println(pigLatinSimple("aaron"));
+      // System.out.println(pigLatin("the"));
+      // System.out.println(pigLatin("check"));
+      // System.out.println(pigLatin("skee"));
+      // System.out.println(pigLatin("emu"));
+      // System.out.println(pigLatin("grade"));
+      // System.out.println(pigLatinBest("*emu"));
+      // System.out.println(pigLatinBest("4chan"));
+      // System.out.println(pigLatinBest("fish!"));
+      // System.out.println(pigLatinBest("fish"));
+      // System.out.println(pigLatinBest("the."));
+      // System.out.println(pigLatinBest("cat!"));
+      // System.out.println(pigLatinBest("amazing?"));
+      // System.out.println(pigLatinBest("apple%"));
     }
     public static String pigLatinSimple(String s){
       String ns = "";
